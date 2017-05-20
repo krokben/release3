@@ -1,0 +1,655 @@
+/*
+Theme Name: Release 3
+Theme URI: http://krokben.se
+Author: Tommy Svensson
+Author URI: http://krokben.se
+Description: Simple Bootstrap Wordpress Theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: techguymedia
+*/
+
+:root {
+	--primary-color: #CA4747;
+	--primary-color75: rgba(202, 71, 71, 0.75);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff;
+	color: #fff;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 4.4vw;
+	font-weight: 500;
+	text-align: justify;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 0.8em;
+	font-weight: 400;
+}
+
+.fa {
+	color: #fff;
+	font-weight: 400;
+}
+
+.main {
+	position: relative;
+}
+
+/*--------------------------------------*\
+	Flexbox
+\*--------------------------------------*/
+
+.flex-row {
+	display: flex;
+}
+
+.flex-row-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-col-wrap {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.center {
+	justify-content: center;
+}
+
+.flex1 {flex: 1;}
+.flex2 {flex: 2;}
+.flex3 {flex: 3;}
+.flex4 {flex: 4;}
+.flex5 {flex: 5;}
+.flex6 {flex: 6;}
+.flex7 {flex: 7;}
+.flex8 {flex: 8;}
+
+/*--------------------------------------*\
+	Navbar
+\*--------------------------------------*/
+
+nav {
+	margin: auto;
+	margin-top: 10px;
+	width: 56.25%;
+	text-transform: lowercase;
+	position: relative;
+	z-index: 100;
+}
+
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	color: #000;
+}
+
+nav ul li.current-home:before {
+/* underline */
+	content: "";
+	position: absolute;
+  height: 0.15em;
+  width: 6%;
+  margin-left: 4vw;
+  margin-top: 5vw;
+  border-bottom: 0.15em solid var(--primary-color);
+}
+
+nav ul li.current-blog:before {
+/* underline */
+	content: "";
+	position: absolute;
+  height: 0.15em;
+  width: 6%;
+  margin-left: 2.8vw;
+  margin-top: 5vw;
+  border-bottom: 0.15em solid var(--primary-color);
+}
+
+nav ul li.current-portfolio:before {
+/* underline */
+	content: "";
+	position: absolute;
+  height: 0.15em;
+  width: 6%;
+  margin-left: 7vw;
+  margin-top: 5vw;
+  border-bottom: 0.15em solid var(--primary-color);
+}
+
+nav ul li.current-cv:before {
+/* underline */
+	content: "";
+	position: absolute;
+  height: 0.15em;
+  width: 6%;
+  margin-left: 0.7vw;
+  margin-top: 5vw;
+  border-bottom: 0.15em solid var(--primary-color);
+}
+
+/*--------------------------------------*\
+	Main
+\*--------------------------------------*/
+
+div.logo {
+	height: 70vw;
+}
+
+div.logo svg {
+	float: right;
+}
+
+div.logo svg g#Mobile-Portrait {
+	fill: var(--primary-color);
+}
+
+main.services {
+	background: var(--primary-color);
+	height: 77vw;
+	width: 100%;
+	position: relative;
+}
+
+main.services div.vertical-line {
+	background: #fff;
+	width: 0.8vw;
+	position: absolute;
+	right: 7%;
+	top: 0;
+	bottom: 60%;
+}
+
+main.services div.horizontal-line {
+	background: #fff;
+	height: 0.8vw;
+	position: absolute;
+	left: 0;
+	right: 80%;
+	top: 74%;
+	bottom: 25%;
+}
+
+main.services div.hole {
+	background: #fff;
+	border-radius: 50%;
+	height: 30vw;
+	width: 30vw;
+	position: absolute;
+	left: 35%;
+	top: 93%;
+}
+
+main.services {
+	text-align: center;
+}
+
+main.services .fa {
+	font-size: 1.5em;
+}
+
+main.services div.service-right {
+	width: 32vw;
+	position: absolute;
+	right: 6%;
+	top: 35%;
+}
+
+main.services div.service-right p, main.services div.service-left p {
+	font-size: 0.4em;
+	font-weight: 400;
+}
+
+main.services div.service-left {
+	width: 32vw;
+	position: absolute;
+	left: 4%;
+	top: 50%;
+}
+
+/*--------------------------------------*\
+	Skills
+\*--------------------------------------*/
+
+div.skills {
+	padding: 9%;
+}
+
+div.skills .author {
+	position: relative;
+	margin-bottom: 4%;
+}
+
+div.skills .circle {
+	/*background: url(../images/jag.jpg);*/
+	background-size: contain;
+	border: 0.2em solid var(--primary-color);
+	border-radius: 50%;
+	height: 29vw;
+	width: 29vw;
+}
+
+div.skills .line {
+	background: var(--primary-color);
+	height: 0.2em;
+	position: absolute;
+	bottom: 2.7%;
+	left: 23.4%;
+	right: 0;
+}
+
+div.skills .name {
+	color: var(--primary-color);
+	font-size: 1.45em;
+	position: absolute;
+	bottom: 10%;
+	left: 38%;
+}
+
+div.skills .list {
+	color: var(--primary-color);
+	font-weight: 400;
+	padding-left: 4%;
+}
+
+div.skills .list .item {
+	text-align: center;
+	width: 15%;
+}
+
+div.skills .list .item-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 2%;
+	width: 35%;
+}
+
+div.skills .list .item-bar div {
+	background: var(--primary-color);
+	height: 20%;
+	width: 90%;
+}
+
+div.skills .list .item-bar div.html {width: 100%;}
+div.skills .list .item-bar div.css {width: 100%;}
+div.skills .list .item-bar div.js {width: 75%;}
+div.skills .list .item-bar div.react {width: 65%;}
+div.skills .list .item-bar div.php {width: 50%;}
+div.skills .list .item-bar div.sktch {width: 55%;}
+
+/*--------------------------------------*\
+	Blog
+\*--------------------------------------*/
+
+main.blog {
+	padding: 6%;
+}
+
+main.blog .container {
+	background: var(--primary-color);
+	border-radius: 5px;
+	height: 100%;
+	margin-top: 6%;
+	padding: 3%;
+}
+
+main.blog .container .text {
+	padding-left: 3vw;
+}
+
+main.blog .container .header {
+	padding-bottom: 2%;
+}
+
+main.blog .container .header img {
+	border-radius: 5px;
+	height: 15vw;
+	width: 25vw;
+}
+
+main.blog .container .body {
+	background: #fff;
+	border-radius: 5px;
+	color: #000;
+	font-size: 0.7em;
+	font-weight: 400;
+	padding: 2%;
+	width: 100%;
+}
+
+/*--------------------------------------*\
+	Blog Sidebar
+\*--------------------------------------*/
+
+div.browse-blog {
+	background: var(--primary-color75);
+	padding: 6%;
+	text-shadow: 0.05em 0.1em 0 #000;
+	text-transform: lowercase;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 50%;
+	bottom: 0;
+}
+
+div.browse-blog div {
+	padding: 6vw 0;
+}
+
+div.browse-blog div h2 {
+	font-size: 1.8em;
+}
+
+div.browse-blog div ul {
+	list-style: none;
+}
+
+.browse {
+	animation: pulse 1s ease-out;
+	animation-iteration-count: infinite;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius: 50%;
+	cursor: pointer;
+	opacity: 0.75%;
+	height: 8vw;
+	width: 8vw;
+	position: absolute;
+	top: 3.5vw;
+	right: 6%;
+}
+
+/* Search bar */
+label.screen-reader-text {
+	/* Remove "search for" text */
+	display: none;
+}
+
+div.browse-blog div.searchform {
+	padding-bottom: 0;
+}
+
+div.browse-blog #searchform {
+	text-align: right;
+}
+
+div.browse-blog #searchform input[type='text'] {
+	width: 100%;
+	padding: 10px;
+	font-size: 0.6em;
+}
+
+div.browse-blog #searchform input[type='submit'] {
+	flex: 1;
+	background-color: transparent;
+	border: none;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  display: inline-block;
+  font-size: 0.6em;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+div.browse-blog #searchform input[type='submit']:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+/*--------------------------------------*\
+	Portfolio
+\*--------------------------------------*/
+
+main.portfolio {
+	color: #000;
+	font-weight: 400;
+	padding: 12% 6%;
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
+
+main.portfolio h3 {
+	font-weight: 500;
+}
+
+main.portfolio p {
+	font-size: 0.8em;
+}
+
+main.portfolio article {
+	padding: 3% 0;
+}
+
+main.portfolio .images {
+	padding-right: 6%;
+	width: 50%;
+}
+
+main.portfolio .images img {
+	height: 25vw;
+	width: 100%;
+}
+
+main.portfolio .descriptions {
+	padding-left: 6%;
+	width: 50%;
+}
+
+div.red-background {
+	background: var(--primary-color75);
+	padding: 6%;
+	text-shadow: 0.05em 0.1em 0 #000;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	right: 50%;
+	left: 0;
+	bottom: 0;
+}
+
+/*--------------------------------------*\
+	CV
+\*--------------------------------------*/
+
+main.cv {
+	color: #000;
+	font-weight: 400;
+	padding: 12% 6%;
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
+
+main.cv h3 {
+	font-weight: 500;
+	font-size: 1.5em;
+}
+
+main.cv article {
+	padding: 3% 0;
+}
+
+main.cv article ul {
+	list-style: none;
+}
+
+main.cv article ul li {
+	font-size: 0.8em;
+}
+
+main.cv article ul li span {
+	float: right;
+}
+
+main.cv .blank {
+	padding-right: 6%;
+	width: 50%;
+}
+
+main.cv .item {
+	padding-left: 6%;
+	width: 50%;
+}
+
+div.red-background-small1, div.red-background-small2 {
+	background: var(--primary-color75);
+	text-shadow: 0.05em 0.1em 0 #000;
+	overflow: auto;
+	height: 31.5vw;
+	position: absolute;
+	top: 34vw;
+	right: 0;
+	left: 50%;
+}
+
+div.red-background-small2 {
+	top: 97.5vw;
+}
+
+/*--------------------------------------*\
+	Footer
+\*--------------------------------------*/
+
+footer {
+	justify-content: center;
+	background: var(--primary-color);
+	font-size: 1.5em;
+	height: 50vw;
+	padding: 5%;
+	position: relative;
+	z-index: 100;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer ul li a:hover {
+	color: #000;
+	cursor: pointer;
+}
+
+/*--------------------------------------*\
+	Misc.
+\*--------------------------------------*/
+
+.empty-side {width: 0;}
+.border-left {border-left: 1px solid #ccc;}
+.border-right {border-right: 1px solid #ccc;}
+.hidden {display: none;}
+.position-fixed {position: fixed;}
+.primary75-bg {background-color: var(--primary-color75);}
+.white {color: #fff;}
+.black-link {color: #000;}
+.black-link:hover {color: var(--primary-color);}
+
+#base {
+	background: none;
+	border: none;
+	position: absolute;
+	top: 2.5vw;
+	left: 2.5vw;
+}
+
+/*--------------------------------------*\
+	Keyframes
+\*--------------------------------------*/
+
+@keyframes pulse {
+	0% {transform: scale(1); }
+	25% {transform: scale(1.05); }
+	50% {transform: scale(1.1); }
+	75% {transform: scale(1.1); }
+	100% {transform: scale(1.05); }
+}
+
+/*--------------------------------------*\
+	Media Queries
+\*--------------------------------------*/
+
+@media only screen and (min-width: 600px) {
+/* Tablets */
+	.browse {top: 2.5vw;}
+}
+
+@media only screen and (min-width: 768px) {
+/* Desktop */
+	.browse {top: 2vw;}
+}
+
+@media only screen and (min-width: 1024px) {
+/* Big screen */
+	.empty-side {width: 10vw;}
+	nav {width: 65%;}
+	main.services {height: 54.5vw;}
+	div.logo {height: 58vw;}
+	main.services div.hole {left: 32%;}
+	main.services div.horizontal-line {top: 80%;}
+	main.services div.service-right {top: 33%;}
+	div.skills .line {left: 29%;}
+	div.skills .name {font-size: 1em; left: 46%;}
+	div.skills .list .item {font-size: 0.8em;}
+	footer {height: 30vw; font-size: 1.2em;}
+	.browse {height: 5vw; width: 5vw;}
+	div.red-background {left: 10vw;}
+}
