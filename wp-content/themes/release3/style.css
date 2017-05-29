@@ -602,6 +602,7 @@ footer ul li a:hover {
 .white {color: #fff;}
 .black-link {color: #000;}
 .black-link:hover {color: var(--primary-color);}
+.read-more {color: var(--primary-color);}
 
 #base {
 	background: none;
@@ -652,4 +653,6 @@ footer ul li a:hover {
 	footer {height: 30vw; font-size: 1.2em;}
 	.browse {height: 5vw; width: 5vw;}
 	div.red-background {left: 10vw;}
+	main.cv .item li {font-size: 0.7em;}
+	main.portfolio .images img {height: 15vw; width: auto;}
 }

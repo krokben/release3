@@ -55,7 +55,7 @@ function getPortfolioItems() {
 	const portfolio = document.querySelector('.portfolio');
 
 	const request = new XMLHttpRequest();
-	request.open('GET', 'http://localhost/_release3wp/wp-json/wp/v2/portfolio_posts/');
+	request.open('GET', '../wp-json/wp/v2/portfolio_posts/');
 	request.onload = function() {
 	  if (request.status === 200) {
 	  	const response = JSON.parse(request.responseText);
